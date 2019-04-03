@@ -4,7 +4,7 @@
 #
 Name     : deprecated-Babel
 Version  : 2.6.0
-Release  : 65
+Release  : 66
 URL      : https://pypi.debian.net/Babel/Babel-2.6.0.tar.gz
 Source0  : https://pypi.debian.net/Babel/Babel-2.6.0.tar.gz
 Summary  : Internationalization utilities
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554308037
+export SOURCE_DATE_EPOCH=1554310140
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -92,7 +92,7 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/pybabel
+%exclude /usr/bin/pybabel
 
 %files legacypython
 %defattr(-,root,root,-)
